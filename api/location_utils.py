@@ -1,7 +1,9 @@
 import requests
 
+from auth.settings import API_KEY
+
 def get_location_coordinates(place_name):
-    API_KEY = 'AIzaSyCISgKMgd9AYAhgD-1EfO5cn069Rrh5gTg'
+    
     base_url = f"https://maps.googleapis.com/maps/api/geocode/json?address={place_name}&key={API_KEY}"
     
     response = requests.get(base_url)
